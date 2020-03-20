@@ -3,23 +3,22 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 
 class App extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
       result: 0,
     };
   }
-  
+
   render() {
+    const { result } = this.state;
     return (
       <div>
-        <Display result={this.state.result}/>
+        <Display result={result} />
         <ButtonPanel />
       </div>
     );
   }
-
 }
 
 export default App;
