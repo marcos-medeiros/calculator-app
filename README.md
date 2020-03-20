@@ -20,7 +20,7 @@ Download or clone the [repo here](https://github.com/marcos-medeiros/calculator-
 - `npm install`
 - `npm run start`
 
-Your default browser should open the app at the localhost:8080
+Your default browser should open the app at the localhost:3000
 
 <a name="tools"></a>
 ### Used tools
