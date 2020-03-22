@@ -30,7 +30,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-  color: '#E4572E',
+  color: '#FB8B24',
   wide: false,
   bottomLeftRadius: false,
   bottomRightRadius: false,
