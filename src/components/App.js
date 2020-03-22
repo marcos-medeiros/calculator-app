@@ -1,6 +1,7 @@
 import React from 'react';
 import Display from './Display';
 import ButtonPanel from './ButtonPanel';
+import '../style/App.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -13,9 +14,11 @@ class App extends React.Component {
   render() {
     const { result } = this.state;
     return (
-      <div>
-        <Display result={result.toString()} />
-        <ButtonPanel />
+      <div className="app">
+        <div className="calculator-div">
+          <Display result={result.toString()} />
+          <ButtonPanel />
+        </div>
       </div>
     );
   }
