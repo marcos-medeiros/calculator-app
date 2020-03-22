@@ -8,6 +8,7 @@ const Calculate = (data, btn) => {
     result.next = 0;
     result.operation = '';
   }
+  
   return result;
 };
 
