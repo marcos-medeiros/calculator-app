@@ -5,8 +5,8 @@ const Button = props => {
   const { name } = props;
   const { color } = props;
   const { wide } = props;
-  const {bottomRightRadius} = props;
-  const {bottomLeftRadius} = props;
+  const { bottomRightRadius } = props;
+  const { bottomLeftRadius } = props;
   const styles = {
     flexBasis: wide ? '50%' : '25%',
     backgroundColor: color,
@@ -15,8 +15,8 @@ const Button = props => {
   };
 
   return (
-    <div className='btn' style={styles}>
-        {name}
+    <div className="btn" style={styles}>
+      {name}
     </div>
   );
 };

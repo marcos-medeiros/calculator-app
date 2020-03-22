@@ -13,7 +13,7 @@ body {
 
 .calculator-div {
   margin: 11em auto;
-  box-shadow: 0 0 10px #0f0f18;
+  box-shadow: 0 0 40px 4px #0f0f18;
   max-width: 700px;
 }
 

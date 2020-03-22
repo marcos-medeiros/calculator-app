@@ -15,10 +15,10 @@ class App extends React.Component {
     const { result } = this.state;
     return (
       <div className="app">
-          <div className='calculator-div'>
-            <Display result={result.toString()} />
-            <ButtonPanel />
-          </div>
+        <div className="calculator-div">
+          <Display result={result.toString()} />
+          <ButtonPanel />
+        </div>
       </div>
     );
   }
