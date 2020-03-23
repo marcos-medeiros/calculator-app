@@ -31,6 +31,7 @@ Button.propTypes = {
   wide: PropTypes.bool,
   bottomLeftRadius: PropTypes.bool,
   bottomRightRadius: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {
