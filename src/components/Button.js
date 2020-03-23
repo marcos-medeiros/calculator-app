@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ name, color, wide, bottomLeftRadius, bottomRightRadius }) => {
-
+const Button = ({
+  name, color, wide, bottomLeftRadius, bottomRightRadius, onClick,
+}) => {
   const styles = {
     flexBasis: wide ? '50%' : '25%',
     backgroundColor: color,
