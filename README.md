@@ -1,5 +1,10 @@
 # Calculator App
 
+![Screenshot](public/screenshot.png?raw=true "Calculator App")
+
+
+[Live Demo](https://github.com/marcos-medeiros)
+
 ## Contents
 
 * [About](#about)
