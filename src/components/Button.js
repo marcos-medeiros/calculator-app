@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const Button = props => {
   const {
-    name, color, wide, bottomLeftRadius, bottomRightRadius, onClick
+    name, color, wide, bottomLeftRadius, bottomRightRadius, onClick,
   } = props;
-  
+
   const styles = {
     flexBasis: wide ? '50%' : '25%',
     backgroundColor: color,
@@ -16,7 +16,7 @@ const Button = props => {
 
   const handleClick = () => {
     onClick(name);
-  }
+  };
 
   return (
     <div className="btn" style={styles} onClick={handleClick}>

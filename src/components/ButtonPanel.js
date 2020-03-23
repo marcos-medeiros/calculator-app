@@ -2,8 +2,7 @@ import React from 'react';
 import Button from './Button';
 
 const ButtonPanel = props => {
-
-  const {clickHandler} = props;
+  const { clickHandler } = props;
 
   return (
     <div className="btn-panel">

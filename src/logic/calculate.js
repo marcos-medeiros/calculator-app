@@ -18,7 +18,7 @@ const Calculate = (data, btn) => {
     case '.':
       if (next) {
         result.next += btn;
-        result.current += btn; 
+        result.current += btn;
       } else {
         result.next = btn;
         result.current = btn;
@@ -92,7 +92,7 @@ const Calculate = (data, btn) => {
         result.current = result.total;
       } else {
         result.operation = null;
-        result.current = total ? total : next ? next : '0';
+        result.current = total || (next || '0');
       }
       break;
     case 'AC':
@@ -105,7 +105,7 @@ const Calculate = (data, btn) => {
       result.total = null;
       result.next = null;
       result.operation = null;
-      result.current = null;  
+      result.current = null;
       break;
   }
 
