@@ -3,7 +3,7 @@
 ![Screenshot](public/screenshot.png?raw=true "Calculator App")
 
 
-[Live Demo](https://github.com/marcos-medeiros)
+[Live Demo](https://react-calculator-project.herokuapp.com/)
 
 ## Contents
 
