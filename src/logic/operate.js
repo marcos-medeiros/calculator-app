@@ -21,7 +21,11 @@ const Operate = (operation, num1, num2 = '0') => {
   } else if (operation === '+/-') {
     result = big1.times(-1);
   } else if (operation === '%') {
-    result = big1.times(big2.div(100));
+    if (num2 !== '0') {
+      result = big1.times(big2.div(100));
+    } else {
+      result = big1.div(100);
+    }
   }
   return result;
 };

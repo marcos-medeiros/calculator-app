@@ -69,8 +69,9 @@ const Calculate = (data, btn) => {
       break;
     case '%':
       if ((total && !next) || (!total && next)) {
-        result.total = '0';
+        result.total = Operate(btn, (total || next)).toString();
         result.operation = null;
+        result.next = null;
         result.current = result.total;
       } else if (total && next) {
         result.total = Operate(operation, total, Operate(btn, total, next)).toString();
