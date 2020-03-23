@@ -3,8 +3,8 @@ import Big from 'big-js';
 const Operate = (operation, num1, num2 = '0') => {
   let result = '';
 
-  const big1 = Big(parseFloat(num1));
-  const big2 = Big(parseFloat(num2));
+  const big1 = Big(num1);
+  const big2 = Big(num2);
 
   if (operation === '+') {
     result = big1.plus(big2);
@@ -21,11 +21,7 @@ const Operate = (operation, num1, num2 = '0') => {
   } else if (operation === '+/-') {
     result = big1.times(-1);
   } else if (operation === '%') {
-    if (num2 === '0') {
-      result = big1;
-    } else {
-      result = big1.times(big2.div(100));
-    }
+    result = big1.times(big2.div(100));
   }
   return result;
 };
