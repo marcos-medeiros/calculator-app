@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Button = props => {
-  const { name } = props;
-  const { color } = props;
-  const { wide } = props;
-  const { bottomRightRadius } = props;
-  const { bottomLeftRadius } = props;
+  const {
+    name, color, wide, bottomLeftRadius, bottomRightRadius,
+  } = props;
   const styles = {
     flexBasis: wide ? '50%' : '25%',
     backgroundColor: color,
