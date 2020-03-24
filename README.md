@@ -1,6 +1,6 @@
 # Calculator App
 
-![Screenshot](public/screenshot.png?raw=true "Calculator App")
+![Screenshot](docs/screenshot.png?raw=true "Calculator App")
 
 
 [Live Demo](https://marcos-medeiros.github.io/calculator-app/)
