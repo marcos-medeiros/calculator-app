@@ -17,6 +17,7 @@ const Button = ({
   };
 
   return (
+    // eslint-disable-next-line
     <div className="btn" style={styles} onClick={handleClick}>
       {name}
     </div>

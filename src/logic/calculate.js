@@ -1,7 +1,6 @@
 import Operate from './operate';
 
 const Calculate = (data, btn) => {
-  const { total, next, operation } = { ...data };
   const result = { ...data };
 
   switch (btn) {
@@ -15,8 +14,7 @@ const Calculate = (data, btn) => {
     case '7':
     case '8':
     case '9':
-    case '.':
-      if (next) {
+      if (data.next) {
         result.next += btn;
         result.current += btn;
       } else {
@@ -24,20 +22,29 @@ const Calculate = (data, btn) => {
         result.current = btn;
       }
       break;
+    case '.':
+      if (data.next) {
+        result.next += btn;
+        result.current += btn;
+      } else {
+        result.next = '0.';
+        result.current = '0.';
+      }
+      break;
     case '+':
     case '-':
     case 'x':
     case '÷':
-      if (next && total) {
-        result.total = Operate(operation, total, next).toString();
+      if (data.next && data.total) {
+        result.total = Operate(data.operation, data.total, data.next).toString();
         result.next = null;
         result.operation = btn;
         result.current = result.total;
-      } else if (!next && total) {
+      } else if (!data.next && data.total) {
         result.operation = btn;
         result.current = btn;
-      } else if (next && !total) {
-        result.total = next;
+      } else if (data.next && !data.total) {
+        result.total = data.next;
         result.next = null;
         result.operation = btn;
         result.current = btn;
@@ -49,14 +56,14 @@ const Calculate = (data, btn) => {
       }
       break;
     case '+/-':
-      if (next && !total) {
-        result.next = Operate(btn, next).toString();
+      if (data.next && !data.total) {
+        result.next = Operate(btn, data.next).toString();
         result.current = result.next;
-      } else if (total && !next) {
-        result.total = Operate(btn, total).toString();
+      } else if (data.total && !data.next) {
+        result.total = Operate(btn, data.total).toString();
         result.current = result.total;
-      } else if (total && next) {
-        result.total = Operate(btn, Operate(operation, total, next)).toString();
+      } else if (data.total && data.next) {
+        result.total = Operate(btn, Operate(data.operation, data.total, data.next)).toString();
         result.operation = null;
         result.next = null;
         result.current = result.total;
@@ -68,13 +75,14 @@ const Calculate = (data, btn) => {
       }
       break;
     case '%':
-      if ((total && !next) || (!total && next)) {
-        result.total = Operate(btn, (total || next)).toString();
+      if ((data.total && !data.next) || (!data.total && data.next)) {
+        result.total = Operate(btn, (data.total || data.next)).toString();
         result.operation = null;
         result.next = null;
         result.current = result.total;
-      } else if (total && next) {
-        result.total = Operate(operation, total, Operate(btn, total, next)).toString();
+      } else if (data.total && data.next) {
+        result.total = Operate(data.operation, data.total,
+          Operate(btn, data.total, data.next)).toString();
         result.next = null;
         result.operation = null;
         result.current = result.total;
@@ -86,14 +94,14 @@ const Calculate = (data, btn) => {
       }
       break;
     case '=':
-      if (next && total) {
-        result.total = Operate(operation, total, next).toString();
+      if (data.next && data.total) {
+        result.total = Operate(data.operation, data.total, data.next).toString();
         result.next = null;
         result.operation = null;
         result.current = result.total;
       } else {
         result.operation = null;
-        result.current = total || (next || '0');
+        result.current = data.total || (data.next || '0');
       }
       break;
     case 'AC':
