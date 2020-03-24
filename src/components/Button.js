@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = props => {
-  const {
-    name, color, wide, bottomLeftRadius, bottomRightRadius,
-  } = props;
+const Button = ({
+  name, color, wide, bottomLeftRadius, bottomRightRadius, onClick,
+}) => {
   const styles = {
     flexBasis: wide ? '50%' : '25%',
     backgroundColor: color,
@@ -12,8 +11,14 @@ const Button = props => {
     borderBottomLeftRadius: bottomLeftRadius ? 12 : 0,
   };
 
+
+  const handleClick = () => {
+    onClick(name);
+  };
+
   return (
-    <div className="btn" style={styles}>
+    // eslint-disable-next-line
+    <div className="btn" style={styles} onClick={handleClick}>
       {name}
     </div>
   );
@@ -25,6 +30,7 @@ Button.propTypes = {
   wide: PropTypes.bool,
   bottomLeftRadius: PropTypes.bool,
   bottomRightRadius: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
 };
 
 Button.defaultProps = {

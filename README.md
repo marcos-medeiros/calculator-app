@@ -1,5 +1,10 @@
 # Calculator App
 
+![Screenshot](public/screenshot.png?raw=true "Calculator App")
+
+
+[Live Demo](https://react-calculator-project.herokuapp.com/)
+
 ## Contents
 
 * [About](#about)
@@ -39,8 +44,8 @@ This project was built using these technologies.
 
 👤 **Marcos Medeiros**
 
-- Github: [@uryelah](https://github.com/marcos-medeiros)
-- Twitter: [@sarah_chamorro](https://twitter.com/mrcsmedeiros)
+- Github: [@marcos-medeiros](https://github.com/marcos-medeiros)
+- Twitter: [@mrcsmedeiros](https://twitter.com/mrcsmedeiros)
 - Linkedin: [Marcos Medeiros](https://www.linkedin.com/in/marcosmedeiros-dev/)
 - Email: [mvsmdrs@protonmail.com](mvsmdrs@protonmail.com)
 
